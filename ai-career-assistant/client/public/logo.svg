@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <!-- Background circle with light gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e8f0fe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f0f8ff;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <circle cx="50" cy="50" r="48" fill="url(#bgGradient)" stroke="#d0d0d0" stroke-width="1"/>
+  
+  <!-- Left brain hemisphere - light blue -->
+  <circle cx="32" cy="38" r="9" fill="#c5e1ff" stroke="#1a73e8" stroke-width="1.5"/>
+  <circle cx="28" cy="50" r="8" fill="#d4e9ff" stroke="#1a73e8" stroke-width="1.5"/>
+  <circle cx="32" cy="62" r="7" fill="#c5e1ff" stroke="#1a73e8" stroke-width="1.5"/>
+  
+  <!-- Right brain hemisphere - light blue -->
+  <circle cx="68" cy="38" r="9" fill="#c5e1ff" stroke="#1a73e8" stroke-width="1.5"/>
+  <circle cx="72" cy="50" r="8" fill="#d4e9ff" stroke="#1a73e8" stroke-width="1.5"/>
+  <circle cx="68" cy="62" r="7" fill="#c5e1ff" stroke="#1a73e8" stroke-width="1.5"/>
+  
+  <!-- Central processor - light yellow -->
+  <circle cx="50" cy="50" r="6" fill="#fff8dc" stroke="#fbbc04" stroke-width="1.5"/>
+  
+  <!-- Connection lines between hemispheres - gradient effect -->
+  <g stroke="#34a853" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.8">
+    <line x1="41" y1="50" x2="59" y2="50"/>
+    <line x1="40" y1="45" x2="60" y2="45"/>
+    <line x1="40" y1="55" x2="60" y2="55"/>
+  </g>
+  
+  <!-- Upward arrow for career growth - light green -->
+  <g fill="none" stroke="#34a853" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="50" y1="73" x2="50" y2="84"/>
+    <polyline points="50,84 46,78 50,84 54,78" fill="#34a853"/>
+  </g>
+  
+  <!-- Subtle sparkle for professional touch - light -->
+  <circle cx="75" cy="30" r="2" fill="#fbbc04" opacity="0.7"/>
+  <circle cx="25" cy="75" r="1.5" fill="#34a853" opacity="0.6"/>
+</svg>
