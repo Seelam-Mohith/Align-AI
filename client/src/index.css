@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* Dark theme variables used throughout the app */
+  min-height: 100vh;
+  background: var(--app-bg);
+  color: var(--text);
+}
+
+:root {
+  /* Dark theme palette */
+  --app-bg: linear-gradient(135deg, #0f1724 0%, #0b1220 100%);
+  --surface: #0f1724; /* same as app-bg base */
+  --card-bg: #0b1320;
+  --muted: #9aa6b2;
+  --text: #e6eef6;
+  --primary: #7c5cff; /* violet */
+  --primary-2: #5b8cff; /* blue accent */
+  --accent: #ffb86b; /* warm accent */
+  --success: #47d18b;
+  --danger: #ff6b6b;
+  --glass-shadow: rgba(2,6,23,0.6);
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+input, textarea, select {
+  font-family: inherit;
+}

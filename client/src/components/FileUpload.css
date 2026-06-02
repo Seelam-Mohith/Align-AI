@@ -1,0 +1,47 @@
+.file-upload-container {
+  margin: 2rem 0;
+}
+
+.file-upload-label {
+  display: block;
+  cursor: pointer;
+}
+
+.upload-box {
+  border: 2px dashed var(--primary);
+  border-radius: 8px;
+  padding: 3rem 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  background: var(--card-bg);
+}
+
+.upload-box:hover {
+  border-color: var(--primary-2);
+  background: rgba(11,19,32,0.9);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+}
+
+.upload-icon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.upload-text {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0;
+}
+
+.upload-subtext {
+  color: var(--muted);
+  margin: 0.5rem 0 0 0;
+  font-size: 0.9rem;
+}
+
+.file-input {
+  display: none;
+}
