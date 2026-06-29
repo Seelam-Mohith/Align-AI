@@ -42,12 +42,15 @@ start_ml_service() {
     echo "Starting ML Service (FastAPI on port 8000)..."
     cd "$SCRIPT_DIR/ml-service"
     
-    # Create and activate virtual environment if it doesn't exist
-    if [ ! -d "venv" ]; then
+    # Activate virtual environment if it exists
+    if [ -d ".venv" ]; then
+        source .venv/bin/activate
+    elif [ ! -d "venv" ]; then
         python3 -m venv venv
+        source venv/bin/activate
+    else
+        source venv/bin/activate
     fi
-    
-    source venv/bin/activate
     pip install -q -r requirements.txt
     python3 main.py
 }

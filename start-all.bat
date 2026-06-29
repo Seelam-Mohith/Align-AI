@@ -27,20 +27,25 @@ if %ERRORLEVEL% neq 0 (
     exit /b 1
 )
 
+for /f "delims=" %%i in ('node --version') do set NODE_VERSION=%%i
 echo [OK] Node.js found: %NODE_VERSION%
 echo [OK] Python found
 
 echo.
 echo Starting Backend (Express.js on port 5000)...
-start cmd /k "cd /d "%SCRIPT_DIR%server" && npm install --silent && npm run dev"
+start cmd /k "cd /d "%SCRIPT_DIR%server" && if not exist node_modules npm install --silent && npm run dev"
 timeout /t 3 /nobreak
 
 echo Starting ML Service (FastAPI on port 8000)...
-start cmd /k "cd /d "%SCRIPT_DIR%ml-service" && python main.py"
+if exist "%SCRIPT_DIR%ml-service\.venv\Scripts\activate" (
+    start cmd /k "cd /d "%SCRIPT_DIR%ml-service" && call .venv\Scripts\activate && python main.py"
+) else (
+    start cmd /k "cd /d "%SCRIPT_DIR%ml-service" && python main.py"
+)
 timeout /t 3 /nobreak
 
 echo Starting Frontend (React on port 3000)...
-start cmd /k "cd /d "%SCRIPT_DIR%client" && npm install --silent && npm start"
+start cmd /k "cd /d "%SCRIPT_DIR%client" && if not exist node_modules npm install --silent && npm start"
 
 echo.
 echo ========================================
