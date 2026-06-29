@@ -1,14 +1,21 @@
 {
-  "name": "alignai-root",
+  "name": "ai-career-assistant",
   "version": "1.0.0",
-  "private": true,
+  "description": "AI Career Assistant - Full-stack MERN + Python application",
+  "main": "server/server.js",
   "scripts": {
-    "install": "cd ai-career-assistant && npm install && npm install --prefix client && npm install --prefix server && npm run build --prefix client && pip install -r ml-service/requirements.txt",
-    "build": "cd ai-career-assistant && npm run build",
-    "start": "sh ai-career-assistant/start.sh",
-    "start:prod": "sh ai-career-assistant/start.sh"
+    "start": "concurrently \"npm start --prefix client\" \"npm start --prefix server\" \"python ml-service/main.py\"",
+    "start:prod": "concurrently \"node server/server.js\" \"python ml-service/main.py\" \"npm start --prefix client\"",
+    "dev": "concurrently \"npm start --prefix client\" \"npm run dev --prefix server\"",
+    "build": "npm run build --prefix client",
+    "install-all": "npm install && npm install --prefix client && npm install --prefix server",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "engines": {
-    "node": ">=18"
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^7.6.0"
   }
 }
+

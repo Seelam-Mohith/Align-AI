@@ -16,7 +16,6 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "ai-career-assistant": "file:..",
     "axios": "^1.3.0",
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
